@@ -117,11 +117,11 @@ author:
   avatar           :  # "/assets/images/IMG_1337.HEIC"
   bio              : "Master student in University of Chinese Academy of Sciences."
   location         : "Shanghai, China"
-  email            : "
+  email            : "liuchenyuan23@mails.ucas.edu.cn"
   links:
     - label: "Email: liuchenyuan0902@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      url: "ChenyuanLiu92.github.io"
+      # url: "ChenyuanLiu92.github.io"
       
     - label: "Website"
       icon: "fas fa-fw fa-link"
