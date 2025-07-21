@@ -313,6 +313,13 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  news:
+    output: true # 设置为 true 会为集合中的每个条目生成独立的页面
+    permalink: /news/:name/ # 新闻条目的URL结构
+  publications:
+    output: true
+    permalink: /publications/:name/ # 出版物条目的URL结构
 
 # Defaults
 defaults:
