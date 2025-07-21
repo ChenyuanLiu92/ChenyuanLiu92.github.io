@@ -21,7 +21,7 @@ title                    : "Chenyuan Liu's Homepage"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Chenyuan Liu"
-description              : "路漫漫其修远兮，吾将上下而求索。"
+description              : "Trying to do better."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -119,10 +119,6 @@ author:
   location         : "Shanghai, China"
   email            : "liuchenyuan23@mails.ucas.edu.cn"
   links:
-    - label: "Email: liuchenyuan0902@gmail.com"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "ChenyuanLiu92.github.io"
-      
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -132,6 +128,9 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
+    - label: "Google Scholar"
+      icon: "fab fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=X3rfnOUAAAAJ&hl=zh-CN"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ChenyuanLiu92"
@@ -139,9 +138,7 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
       
-    - label: "Google Scholar"
-      icon: "fab fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=X3rfnOUAAAAJ&hl=zh-CN"
+
 
 # Site Footer
 footer:
