@@ -317,9 +317,6 @@ collections:
   news:
     output: true # 设置为 true 会为集合中的每个条目生成独立的页面
     permalink: /news/:name/ # 新闻条目的URL结构
-  publications:
-    output: true
-    permalink: /publications/:name/ # 出版物条目的URL结构
 
 # Defaults
 defaults:
@@ -328,7 +325,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: archive
+      layout: single
       author_profile: true
       read_time: true
       comments: # true
@@ -337,3 +334,4 @@ defaults:
       show_date: true
       codedate_format: "%Y-%m-%d"
       search: true
+      classes: wide

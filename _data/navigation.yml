@@ -3,7 +3,7 @@ main:
   - title: "News"
     url: /#news
   - title: "Publications"
-    url: /#publications
+    url: /publications/
   - title: "Project"
     url: 
   - title: "CV"

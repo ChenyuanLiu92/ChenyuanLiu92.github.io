@@ -7,33 +7,35 @@ layout: archive
 <!-- News Section -->
 <h3 class="archive__subtitle" id="news">News</h3>
 <div class="news-section" style="margin: 20px 0;">
-  <div class="news-item" style="margin-bottom: 15px; padding: 10px 0;">
-    <div style="margin-bottom: 5px;">
+  <div class="news-list" style="line-height: 1.4;">
+    <p style="margin-bottom: 3px;">
       <strong>[2025.03.17]</strong> 🔥 Our paper <em>Deep Learning for State of Health Estimation of Lithium-Ion Batteries in Electric Vehicles: A Systematic Review</em> is accepted by <strong>Energies</strong>!
-    </div>
-  </div>
-  
-  <div class="news-item" style="margin-bottom: 15px; padding: 10px 0;">
-    <div style="margin-bottom: 5px;">
+    </p>
+    
+    <p style="margin-bottom: 3px;">
       <strong>[2024.12.14]</strong> 🔥 Our paper <em>Large language model enabled health management for internet of batteries in electric vehicles</em> is accepted by <strong>IEEE Internet of Things Journal</strong>!
-    </div>
+    </p>
   </div>
 </div>
 
 <!-- Publications Section -->
-{% assign publication_posts = site.publications | sort: 'date' | reverse %}
-{% if publication_posts.size > 0 %}
 <h3 class="archive__subtitle" id="publications">Publications</h3>
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in publication_posts limit:5 %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
+<div class="publications-section" style="margin: 20px 0;">
+  <div class="publication-list" style="line-height: 1.4;">
+    <p style="margin-bottom: 3px;">
+      1. Peng H#, <strong>Liu C#</strong>, Li H. <em>Large Language Model Enabled Health Management for Internet of Batteries in Electric Vehicles</em>. IEEE Internet of Things Journal, 2024.
+    </p>
+    
+    <p style="margin-bottom: 3px;">
+      2. <strong>Liu C#</strong>, Li H#, Li K, et al. <em>Deep Learning for State of Health Estimation of Lithium-Ion Batteries in Electric Vehicles: A Systematic Review</em>. Energies, 2025, 18(6): 1463.
+    </p>
+    
+    <p style="margin-bottom: 3px;">
+      3. <strong>Liu C</strong>, Xu X, Liu W, et al. <em>From Motor to Battery: A Digital Twin Model of Electric Vehicles</em>. International Conference on Image, Vision and Intelligent Systems, 2022: 735-745.
+    </p>
+  </div>
+  
+  <p class="text-center" style="margin-top: 20px;">
+    <a href="/publications/" class="btn btn--primary">View Complete Publication List</a>
+  </p>
 </div>
-
-{% if publication_posts.size > 5 %}
-<p class="text-center">
-  <a href="/publications/" class="btn btn--primary">View All Publications</a>
-</p>
-{% endif %}
-{% endif %}
