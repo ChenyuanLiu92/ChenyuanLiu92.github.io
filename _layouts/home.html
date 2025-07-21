@@ -1,10 +1,64 @@
 ---
-layout: archive
+layout: home
 ---
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Introduction" }}</h3>
+---
+
+<h3 class="archive__subtitle">News</h3>
+<div class="entries-list">
+  {% assign news_items = site.news | sort: "date" | reverse | limit: 3 %} {# 获取最新的3条新闻 #}
+  {% if news_items.size > 0 %}
+    <ul>
+    {% for item in news_items %}
+      <li>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a> - <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%Y年%m月%d日" }}</time>
+        <p>{{ item.excerpt | markdownify | strip_html | truncatewords: 30 }}</p>
+      </li>
+    {% endfor %}
+    </ul>
+    <p><a href="{{ '/news/' | relative_url }}">查看所有新闻 &raquo;</a></p>
+  {% else %}
+    <p>目前没有新闻发布。</p>
+  {% endif %}
+</div>
+
+---
+
+<h3 class="archive__subtitle">Publications</h3>
+<div class="entries-list">
+  {% assign publications_items = site.publications | sort: "year" | reverse | limit: 3 %} {# 获取最新的3篇出版物 #}
+  {% if publications_items.size > 0 %}
+    <ul>
+    {% for item in publications_items %}
+      <li>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a><br>
+        {% if item.authors %}
+          **作者:** {{ item.authors }}<br>
+        {% endif %}
+        {% if item.journal %}
+          **期刊:** {{ item.journal }}, {{ item.year }}
+        {% elsif item.book_title %}
+          **书籍:** {{ item.book_title }}, {{ item.year }}
+        {% else %}
+          **年份:** {{ item.year }}
+        {% endif %}
+        {% if item.excerpt %}
+          <p>{{ item.excerpt | markdownify | strip_html | truncatewords: 40 }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+    <p><a href="{{ '/publications/' | relative_url }}">查看所有出版物 &raquo;</a></p>
+  {% else %}
+    <p>目前没有出版物。</p>
+  {% endif %}
+</div>
+
+---
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "最近文章" }}</h3>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
