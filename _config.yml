@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Chenyuan Liu"
-  avatar           :  # "/assets/images/IMG_1337.HEIC"
+  avatar           :  "/assets/images/mimi.jpg"
   bio              : "Master student in University of Chinese Academy of Sciences."
   location         : "Shanghai, China"
   email            : "liuchenyuan23@mails.ucas.edu.cn"
