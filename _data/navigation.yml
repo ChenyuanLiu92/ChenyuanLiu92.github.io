@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "CV"
-    url: 
   - title: "Publications"
     url: 
   - title: "Project"
+    url: 
+  - title: "CV"
     url: 
   - title: "Blog"
     url: https://mmistakes.github.io/minimal-mistakes/about/
