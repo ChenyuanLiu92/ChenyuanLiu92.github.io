@@ -4,17 +4,36 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
+<!-- News Section -->
+<h3 class="archive__subtitle" id="news">News</h3>
+<div class="news-section" style="margin: 20px 0;">
+  <div class="news-item" style="margin-bottom: 15px; padding: 10px 0;">
+    <div style="margin-bottom: 5px;">
+      <strong>[2025.03.17]</strong> 🔥 Our paper <em>Deep Learning for State of Health Estimation of Lithium-Ion Batteries in Electric Vehicles: A Systematic Review</em> is accepted by <strong>Energies</strong>!
+    </div>
+  </div>
+  
+  <div class="news-item" style="margin-bottom: 15px; padding: 10px 0;">
+    <div style="margin-bottom: 5px;">
+      <strong>[2024.12.14]</strong> 🔥 Our paper <em>Large language model enabled health management for internet of batteries in electric vehicles</em> is accepted by <strong>IEEE Internet of Things Journal</strong>!
+    </div>
+  </div>
 </div>
 
-{% include paginator.html %}
+<!-- Publications Section -->
+{% assign publication_posts = site.publications | sort: 'date' | reverse %}
+{% if publication_posts.size > 0 %}
+<h3 class="archive__subtitle" id="publications">Publications</h3>
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in publication_posts limit:5 %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% if publication_posts.size > 5 %}
+<p class="text-center">
+  <a href="/publications/" class="btn btn--primary">View All Publications</a>
+</p>
+{% endif %}
+{% endif %}

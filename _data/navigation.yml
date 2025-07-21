@@ -1,13 +1,16 @@
 # main links
 main:
+  - title: "News"
+    url: /#news
   - title: "Publications"
-    url: 
+    url: /#publications
   - title: "Project"
     url: 
   - title: "CV"
-    url: 
+    url: /assets/documents/Chenyuan_Liu_CV.pdf
+    target: _blank
   - title: "Blog"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
+    url: /blog/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
