@@ -15,7 +15,8 @@ body {
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.6;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -128,6 +129,10 @@ blockquote {
 /* links */
 
 a {
+  color: $link-color;
+  text-decoration: none;
+  font-weight: 600;
+
   &:focus {
     @extend %tab-focus;
   }
@@ -138,6 +143,7 @@ a {
 
   &:hover {
     color: $link-color-hover;
+    border-bottom-width: 2px;
     outline: 0;
   }
 }

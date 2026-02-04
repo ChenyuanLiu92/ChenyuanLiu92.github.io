@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settingsç
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Chenyuan Liu's Homepage"
+title                    : "<span class='orange'>🍊</span> David Liu's Homepage"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Chenyuan Liu"
@@ -113,9 +113,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Chenyuan Liu"
-  avatar           :  "/assets/images/mimi.jpg"
-  bio              : "Master student in University of Chinese Academy of Sciences."
+  name             : "<span class='orange'>🍊</span> Chenyuan Liu"
+  avatar           : "/assets/images/mimi.jpg"
+  bio              : "Incoming Ph.D. Student @ Shanghai Jiao Tong University"
+  motto            : "路漫漫其修远兮，吾将上下而求索"
   location         : "Shanghai, China"
   email            : "liuchenyuan23@mails.ucas.edu.cn"
   links:

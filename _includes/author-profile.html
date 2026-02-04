@@ -13,11 +13,16 @@
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name }}</a>
+      <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
     </h3>
     {% if author.bio %}
       <div class="author__bio p-note" itemprop="description">
         {{ author.bio | markdownify }}
+      </div>
+    {% endif %}
+    {% if author.motto %}
+      <div class="author__motto" style="font-style: italic; font-size: 0.8em; margin-top: 5px; margin-bottom: 5px; color: #555; font-weight: 500;">
+        {{ author.motto | markdownify | remove: '<p>' | remove: '</p>' }}
       </div>
     {% endif %}
   </div>

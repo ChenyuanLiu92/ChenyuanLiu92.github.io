@@ -1,4 +1,12 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-include-cache", group: :jekyll_plugins
+gem "jekyll"
+gem "jekyll-include-cache"
+gem "jekyll-sitemap"
+gem "jekyll-feed"
+gem "jekyll-seo-tag"
+gem "jekyll-paginate"
+gem "jekyll-gist"
+gem "csv"
+gem "bigdecimal"
+gem "webrick"

@@ -1,11 +1,7 @@
 # main links
 main:
-  - title: "News"
-    url: /#news
   - title: "Publications"
-    url: /publications/
-  - title: "Project"
-    url: 
+    url: /#publication
   - title: "CV"
     url: /assets/documents/Chenyuan_Liu_CV.pdf
     target: _blank

@@ -10,7 +10,25 @@
     opacity: 1;
   }
 }
+/* Waving Hand Animation */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
 
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The before the 10% and 30% is for the wave */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) } /* Return to 0.0 */
+  100% { transform: rotate( 0.0deg) }
+}
 @keyframes intro {
   0% {
     opacity: 0;
@@ -18,4 +36,64 @@
   100% {
     opacity: 1;
   }
+}
+
+/* Burning Animation */
+.burn {
+  display: inline-block;
+  animation: burn-animation 1.5s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 2px rgba(255, 100, 0, 0.4));
+}
+
+@keyframes burn-animation {
+  0% {
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 2px rgba(255, 100, 0, 0.4));
+  }
+  50% {
+    transform: scale(1.1) translateY(-2px) rotate(2deg);
+    filter: drop-shadow(0 0 8px rgba(255, 165, 0, 0.8));
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(-2deg);
+    filter: drop-shadow(0 0 4px rgba(255, 69, 0, 0.6));
+  }
+}
+
+/* Robot Animation */
+.robot {
+  display: inline-block;
+  animation: robot-animation 2s ease-in-out infinite;
+}
+
+@keyframes robot-animation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Book Animation */
+.book {
+  display: inline-block;
+  animation: book-animation 3s ease-in-out infinite;
+}
+
+@keyframes book-animation {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+/* Orange Rolling Animation */
+.orange {
+  display: inline-block;
+  animation: orange-roll 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes orange-roll {
+  0% { transform: rotate(0deg) scale(1); }
+  10% { transform: rotate(15deg) scale(1.1); }
+  20% { transform: rotate(-10deg) scale(1.1); }
+  30% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(0deg) scale(1); }
 }
