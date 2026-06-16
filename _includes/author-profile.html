@@ -20,22 +20,11 @@
         {{ author.bio | markdownify }}
       </div>
     {% endif %}
-    {% if author.motto %}
-      <div class="author__motto" style="font-style: italic; font-size: 0.8em; margin-top: 5px; margin-bottom: 5px; color: #555; font-weight: 500;">
-        {{ author.motto | markdownify | remove: '<p>' | remove: '</p>' }}
-      </div>
-    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
     <ul class="author__urls social-icons">
-      {% if author.location %}
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ author.location }}</span>
-        </li>
-      {% endif %}
-
       {% if author.links %}
         {% for link in author.links %}
           {% if link.label and link.url %}
@@ -58,6 +47,12 @@
             <meta itemprop="email" content="{{ author.email }}" />
             <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
           </a>
+        </li>
+      {% endif %}
+
+      {% if author.location %}
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ author.location }}</span>
         </li>
       {% endif %}
 
@@ -247,5 +242,10 @@
 
       {% include author-profile-custom-links.html %}
     </ul>
+    {% if author.motto %}
+      <div class="author__motto">
+        {{ author.motto | markdownify | remove: '<p>' | remove: '</p>' }}
+      </div>
+    {% endif %}
   </div>
 </div>

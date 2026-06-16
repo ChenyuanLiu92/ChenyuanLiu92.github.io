@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "Publications"
-    url: /#publication
-  - title: "CV"
-    url: /assets/documents/Chenyuan_Liu_CV.pdf
-    target: _blank
+  - title: "Research"
+    url: /#research
+  # - title: "CV"
+  #   url: /assets/documents/Chenyuan_Liu_CV.pdf
+  #   target: _blank
   - title: "Blog"
     url: /blog/
   # - title: "Sample Posts"

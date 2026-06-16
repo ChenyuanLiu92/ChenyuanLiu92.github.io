@@ -5,37 +5,40 @@ layout: archive
 {{ content }}
 
 <!-- News Section -->
-<h3 class="archive__subtitle" id="news"><span class="burn">🔥</span> News</h3>
-<div class="news-section" style="margin: 20px 0;">
-  <div class="news-list" style="line-height: 1.4;">
-    <p style="margin-bottom: 3px;">
-      [2026.01.22] <span class="burn">🔥</span> I will begin my Ph.D. life at Shanghai Jiao Tong University.
+<h3 class="archive__subtitle home-section-title" id="news"><span class="burn">🔥</span> News</h3>
+<div class="news-section home-news-section">
+  <div class="news-list home-news-list">
+    <p class="home-news-item">
+      [2026.06] <span class="burn">🔥</span> I joined the School of Artificial Intelligence at Shanghai Jiao Tong University as a Ph.D. student.
     </p>
   </div>
 </div>
 
-<!-- Publications Section -->
-<h3 class="archive__subtitle" id="publication"><span class="book">📚</span> Selected Publications</h3>
-<div class="publications-section" style="margin: 20px 0;">
-  
-  <!-- Publication Item 1 -->
-  <div class="pub-card">
-    <div class="pub-thumbnail">
-      <img src="/assets/images/publications/GM-100.png" alt="GM-100" onerror="this.src='https://via.placeholder.com/250x150?text=GM-100'" style="object-fit: cover;">
-      <div style="position: absolute; font-size: 0.7rem; font-weight: 600; color: #FFF; background: rgba(0,0,0,0.5); padding: 2px 6px; border-radius: 4px; bottom: 5px; right: 5px;">cs.RO</div>
-    </div>
-    <div class="pub-content">
-      <h4 class="pub-title"><a href="https://arxiv.org/abs/2601.11421">The Great March 100: 100 Detail-oriented Tasks for Evaluating Embodied AI Agents</a></h4>
-      <p class="pub-authors">Ziyu Wang, <strong>Chenyuan Liu</strong>, Yushun Xiang, Runhao Zhang, et al.</p>
-      <div class="pub-meta-row">
-        <span class="pub-conf">arXiv preprint, 2026</span>
-        <div class="pub-links">
-          <a href="https://www.rhos.ai/research/gm-100" class="btn-web">Page</a>
-          <a href="https://arxiv.org/abs/2601.11421" class="btn-arxiv">arXiv</a>
-          <a href="https://github.com/yuz1wan/GM-X" class="btn-code">Code</a>
-        </div>
+<!-- Research Section -->
+<h3 class="archive__subtitle home-section-title" id="research"><span class="spark">✦</span> Research</h3>
+<section class="featured-research">
+  <article class="featured-research-card">
+    <a class="featured-research-visual" href="https://www.rhos.ai/research/gm-100" aria-label="Open GM-100 project page">
+      <img src="/assets/images/publications/GM-100-thumb.jpg" alt="GM-100 benchmark overview" width="900" height="489" loading="lazy" decoding="async">
+      <span class="featured-research-badge">GM-100</span>
+    </a>
+    <div class="featured-research-content">
+      <div class="featured-research-kicker">Robot Learning Benchmark</div>
+      <h4><a href="https://arxiv.org/abs/2601.11421">The Great March 100</a></h4>
+      <p>
+        A 100-task benchmark for evaluating embodied AI agents across diverse interactions and long-tail robotic behaviors.
+        GM-100 combines systematic task design, trajectory data collected on different robotic platforms, and baseline VLA evaluations.
+      </p>
+      <div class="featured-research-stats" aria-label="GM-100 highlights">
+        <span><strong>100</strong> detail-oriented tasks</span>
+        <span><strong>cs.RO</strong> arXiv 2026</span>
+        <span><strong>VLA</strong> baseline evaluation</span>
+      </div>
+      <div class="featured-research-links">
+        <a href="https://www.rhos.ai/research/gm-100">Project Page</a>
+        <a href="https://arxiv.org/abs/2601.11421">Paper</a>
+        <a href="https://github.com/yuz1wan/GM-X">Code</a>
       </div>
     </div>
-  </div>
-
-</div>
+  </article>
+</section>
