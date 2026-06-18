@@ -360,11 +360,28 @@ pre {
 
   .author__urls-wrapper {
     margin-top: 0.8rem;
+    cursor: default;
+
+    button {
+      display: none;
+    }
   }
 
   .author__urls {
     display: grid;
+    position: relative;
+    inset-inline-end: auto;
     gap: 0.36rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .author__urls::before,
+  .author__urls::after {
+    display: none;
   }
 
   .author__urls li {
