@@ -17,11 +17,6 @@
     color: var(--home-ink);
   }
 
-  .archive > p,
-  .archive > br {
-    max-width: 68ch;
-  }
-
   .archive a {
     text-decoration-thickness: 1px;
     text-underline-offset: 0.16em;
@@ -63,7 +58,6 @@
   .home-news-item {
     margin: 0;
     color: var(--home-muted);
-    overflow-wrap: anywhere;
   }
 
   .profile-grid {
@@ -329,15 +323,18 @@
     height: 3rem;
     flex: 0 0 3rem;
     place-items: center;
-    overflow: visible;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 0 0 1px rgba(79, 140, 255, 0.18), 0 12px 34px rgba(0, 0, 0, 0.28);
   }
 
   .education-card__logo img {
-    width: 100%;
-    height: 100%;
+    width: 88%;
+    height: 88%;
     object-fit: contain;
     display: block;
-    filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.32));
   }
 
   .education-card__content {
@@ -361,7 +358,6 @@
     font-size: 0.84rem;
     font-weight: 760;
     line-height: 1.24;
-    overflow-wrap: anywhere;
   }
 
   .education-card__department {
@@ -370,7 +366,6 @@
     font-size: 0.68rem;
     font-weight: 600;
     line-height: 1.28;
-    overflow-wrap: anywhere;
   }
 
   .education-card__supervisor {
@@ -379,7 +374,6 @@
     font-size: 0.67rem;
     font-weight: 650;
     line-height: 1.28;
-    overflow-wrap: anywhere;
   }
 
   .education-card__degree {
@@ -435,70 +429,36 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 820px) {
   .layout--home {
     .profile-grid {
       grid-template-columns: 1fr;
-      gap: 0.95rem;
-    }
-
-    .research-interests__network {
-      max-width: 24rem;
     }
   }
 }
 
 @media (max-width: 600px) {
   .layout--home {
-    .archive {
-      margin-top: 0.65rem;
-      margin-bottom: 1.35rem;
-    }
-
-    .archive p,
-    .archive li {
-      line-height: 1.58;
-    }
-
     .archive__subtitle {
-      margin-top: 1.3rem;
-      margin-bottom: 0.72rem;
-      padding-bottom: 0.42rem;
-      font-size: 0.98rem;
+      margin-top: 1.45rem;
+      font-size: 1rem;
     }
 
     .home-news-section {
-      margin: 0.75rem 0 1.35rem;
-      padding: 0.72rem 0.82rem;
-      border-radius: 7px;
-    }
-
-    .home-news-list {
-      line-height: 1.45;
-    }
-
-    .home-news-item {
-      font-size: 0.82rem;
+      padding: 0.75rem 0.85rem;
     }
 
     .profile-grid {
       grid-template-columns: 1fr;
-      gap: 0.72rem;
-      margin: 0.9rem 0 1.25rem;
+      gap: 0.8rem;
     }
 
     .research-interests {
-      padding: 0.82rem;
-      border-radius: 7px;
+      padding: 0.9rem;
     }
 
     .research-interests__header {
       display: block;
-      margin-bottom: 0.62rem;
-    }
-
-    .research-interests__title {
-      font-size: 0.94rem;
     }
 
     .research-interests__eyebrow {
@@ -509,22 +469,18 @@
     .research-interests__network {
       grid-template-columns: 1fr;
       grid-template-rows: none;
-      gap: 0.48rem;
+      gap: 0.55rem;
       min-height: 0;
       max-width: none;
-      padding-block: 0;
     }
 
     .research-interests__node {
       grid-column: auto;
       grid-row: auto;
       justify-content: flex-start;
-      min-height: 2.72rem;
+      min-height: 2.65rem;
       width: 100%;
       min-width: 0;
-      padding: 0.52rem 0.7rem;
-      font-size: 0.78rem;
-      animation-duration: 8s;
     }
 
     .research-interests__links {
@@ -532,17 +488,11 @@
     }
 
     .education-section {
-      padding: 0.82rem;
-      border-radius: 7px;
+      padding: 0.9rem;
     }
 
     .education-section__header {
       display: block;
-      margin-bottom: 0.62rem;
-    }
-
-    .education-section__title {
-      font-size: 0.94rem;
     }
 
     .education-section__eyebrow {
@@ -552,63 +502,11 @@
 
     .education-cards {
       grid-template-columns: 1fr;
-      gap: 0.54rem;
+      gap: 0.6rem;
     }
 
     .education-card {
-      align-items: flex-start;
-      gap: 0.62rem;
       min-height: 0;
-      padding: 0.64rem 0.66rem;
-      border-radius: 7px;
-    }
-
-    .education-card__logo {
-      width: 2.7rem;
-      height: 2.7rem;
-      flex-basis: 2.7rem;
-      margin-top: 0.05rem;
-    }
-
-    .education-card__period {
-      margin-bottom: 0.25rem;
-      font-size: 0.66rem;
-    }
-
-    .education-card__school {
-      font-size: 0.8rem;
-      line-height: 1.26;
-    }
-
-    .education-card__department,
-    .education-card__supervisor {
-      font-size: 0.66rem;
-      line-height: 1.3;
-    }
-
-    .education-card__degree {
-      margin-top: 0.28rem;
-      font-size: 0.69rem;
-    }
-  }
-}
-
-@media (max-width: 390px) {
-  .layout--home {
-    .education-card {
-      gap: 0.54rem;
-      padding-inline: 0.58rem;
-    }
-
-    .education-card__logo {
-      width: 2.45rem;
-      height: 2.45rem;
-      flex-basis: 2.45rem;
-    }
-
-    .research-interests__node {
-      min-height: 2.58rem;
-      padding-inline: 0.62rem;
     }
   }
 }
