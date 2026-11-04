@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settingsç
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "<span class='orange'>🍊</span> Chenyuan Liu's Homepage"
+title                    : "Chenyuan Liu's Homepage"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Chenyuan Liu"
@@ -115,7 +115,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "<span class='orange'>🍊</span> Chenyuan Liu"
+  name             : "Chenyuan Liu"
   avatar           : "/assets/images/mimi.jpg"
   bio              : "Ph.D. Student @ School of Artificial Intelligence, Shanghai Jiao Tong University"
   motto            : "路漫漫其修远兮，吾将上下而求索"
