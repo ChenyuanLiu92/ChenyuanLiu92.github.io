@@ -82,6 +82,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
+# Paste only the content value from Search Console's HTML verification tag.
 google_site_verification :
 bing_site_verification   :
 naver_site_verification  :
@@ -172,6 +173,10 @@ include:
   - .htaccess
   - _pages
 exclude:
+  - AGENT.md
+  - AGENTS.md
+  - _pages/cv.md
+  - assets/documents/Chenyuan_Liu_CV.pdf
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor

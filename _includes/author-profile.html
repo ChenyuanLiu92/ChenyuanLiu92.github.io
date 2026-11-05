@@ -12,9 +12,13 @@
   {% endif %}
 
   <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
+    {% assign author_heading = 'h3' %}
+    {% if page.layout == 'home' and page.url == '/' %}
+      {% assign author_heading = 'h1' %}
+    {% endif %}
+    <{{ author_heading }} class="author__name p-name" itemprop="name">
       <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ author.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-    </h3>
+    </{{ author_heading }}>
     {% if author.bio %}
       <div class="author__bio p-note" itemprop="description">
         {{ author.bio | markdownify }}
