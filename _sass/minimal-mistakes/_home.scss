@@ -44,15 +44,32 @@
   }
 
   .education-cards {
+    --education-gap: 1.5rem;
     display: grid;
-    gap: 1.5rem;
+    gap: var(--education-gap);
   }
 
   .education-card {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: flex-start;
     min-width: 0;
+  }
+
+  .education-card + .education-card {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(var(--education-gap) / -2 - 0.5px);
+      inset-inline-start: calc(40px + 0.75rem);
+      width: min(8rem, 40%);
+      height: 1px;
+      background: var(--site-border);
+      opacity: 0.6;
+      pointer-events: none;
+    }
   }
 
   .education-card__logo {
@@ -78,11 +95,32 @@
   .education-card__content {
     flex: 1;
     min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .education-card__heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.15rem 1rem;
+  }
+
+  .education-card__details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.15rem 0.65rem;
+    margin-top: 0.2rem;
+  }
+
+  .education-card__details .education-card__department {
+    flex: 1 1 14rem;
+    padding-inline-start: 0.65rem;
+    border-inline-start: 1px solid var(--site-border);
   }
 
   .education-card__period {
-    float: right;
-    margin-left: 1rem;
+    white-space: nowrap;
     color: var(--site-text-muted);
     font-family: var(--site-font-data);
     font-size: 0.75rem;
@@ -90,35 +128,47 @@
   }
 
   .education-card__school {
-    margin: 0 0 0.2rem;
+    margin: 0;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .education-card__department,
   .education-card__supervisor,
   .education-card__degree {
-    margin: 0.15rem 0 0;
+    margin: 0;
     color: var(--site-text-muted);
     font-size: 0.8rem;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   .education-card__degree {
     color: var(--site-text-soft);
+    font-weight: 600;
+  }
+
+  .education-card__supervisor {
+    margin-top: 0.3rem;
   }
 
   .home-news-section {
-    margin: 0 0 1.5rem;
-    padding: 0.85rem 1rem;
-    border-left: 2px solid var(--site-border-strong);
-    border-radius: 0 6px 6px 0;
-    background: var(--site-bg-soft);
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem 0.85rem;
+    margin: 2rem 0 0;
+    color: var(--site-text-muted);
+  }
+
+  .home-news-title {
+    margin: 0;
+    flex: 0 0 auto;
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 
   .home-news-item {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .home-news-item time {
@@ -144,9 +194,21 @@
 }
 
 @media (max-width: 600px) {
+  .layout--home .education-card__heading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .layout--home .education-card__period {
-    display: block;
-    float: none;
-    margin: 0 0 0.25rem;
+    margin: 0;
+  }
+
+  .layout--home .education-card__details {
+    flex-direction: column;
+  }
+
+  .layout--home .education-card__details .education-card__department {
+    flex: auto;
+    padding: 0;
+    border: 0;
   }
 }
